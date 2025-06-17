@@ -1,5 +1,5 @@
 {
-    "name": "bezhansalleh/filament-shield",
+    "name": "webmodern/filament-shield",
     "description": "Filament support for `spatie/laravel-permission`.",
     "keywords": [
         "bezhanSalleh",
@@ -13,7 +13,7 @@
         "rbac",
         "security"
     ],
-    "homepage": "https://github.com/bezhansalleh/filament-shield",
+    "homepage": "https://github.com/webmodern/filament-shield",
     "license": "MIT",
     "authors": [
         {
@@ -43,13 +43,13 @@
     },
     "autoload": {
         "psr-4": {
-            "BezhanSalleh\\FilamentShield\\": "src",
-            "BezhanSalleh\\FilamentShield\\Database\\Factories\\": "database/factories"
+            "webmodern\\FilamentShield\\": "src",
+            "webmodern\\FilamentShield\\Database\\Factories\\": "database/factories"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "BezhanSalleh\\FilamentShield\\Tests\\": "tests"
+            "webmodern\\FilamentShield\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -69,10 +69,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "BezhanSalleh\\FilamentShield\\FilamentShieldServiceProvider"
+                "webmodern\\FilamentShield\\FilamentShieldServiceProvider"
             ],
             "aliases": {
-                "FilamentShield": "BezhanSalleh\\FilamentShield\\Facades\\FilamentShield"
+                "FilamentShield": "webmodern\\FilamentShield\\Facades\\FilamentShield"
             }
         }
     },
