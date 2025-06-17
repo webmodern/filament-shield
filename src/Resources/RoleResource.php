@@ -1,12 +1,12 @@
 <?php
 
-namespace BezhanSalleh\FilamentShield\Resources;
+namespace webmodern\FilamentShield\Resources;
 
-use BezhanSalleh\FilamentShield\Contracts\HasShieldPermissions;
-use BezhanSalleh\FilamentShield\Forms\ShieldSelectAllToggle;
-use BezhanSalleh\FilamentShield\Resources\RoleResource\Pages;
-use BezhanSalleh\FilamentShield\Support\Utils;
-use BezhanSalleh\FilamentShield\Traits\HasShieldFormComponents;
+use webmodern\FilamentShield\Contracts\HasShieldPermissions;
+use webmodern\FilamentShield\Forms\ShieldSelectAllToggle;
+use webmodern\FilamentShield\Resources\RoleResource\Pages;
+use webmodern\FilamentShield\Support\Utils;
+use webmodern\FilamentShield\Traits\HasShieldFormComponents;
 use Filament\Facades\Filament;
 use Filament\Forms;
 use Filament\Forms\Form;

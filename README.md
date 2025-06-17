@@ -1,4 +1,4 @@
-<a href="https://github.com/bezhansalleh/filament-shield" class="filament-hidden">
+<a href="https://github.com/webmodern/filament-shield" class="filament-hidden">
 <img style="width: 100%; max-width: 100%;" alt="filament-shield-art" src="https://user-images.githubusercontent.com/10007504/148662315-35d4bd74-fc1c-4f8c-8c02-689309b414b0.png" >
 </a>
 
@@ -6,18 +6,18 @@
     <a href="https://filamentadmin.com/docs/2.x/admin/installation">
         <img alt="FILAMENT 8.x" src="https://img.shields.io/badge/FILAMENT-3.x-EBB304?style=for-the-badge">
     </a>
-    <a href="https://packagist.org/packages/bezhansalleh/filament-shield">
-        <img alt="Packagist" src="https://img.shields.io/packagist/v/bezhansalleh/filament-shield.svg?style=for-the-badge&logo=packagist">
+    <a href="https://packagist.org/packages/webmodern/filament-shield">
+        <img alt="Packagist" src="https://img.shields.io/packagist/v/webmodern/filament-shield.svg?style=for-the-badge&logo=packagist">
     </a>
-    <a href="https://github.com/bezhansalleh/filament-shield/actions?query=workflow%3Arun-tests+branch%3A3.x">
-        <img alt="Tests Passing" src="https://img.shields.io/github/actions/workflow/status/bezhansalleh/filament-shield/run-tests.yml?style=for-the-badge&logo=github&label=tests" class="filament-hidden">
+    <a href="https://github.com/webmodern/filament-shield/actions?query=workflow%3Arun-tests+branch%3A3.x">
+        <img alt="Tests Passing" src="https://img.shields.io/github/actions/workflow/status/webmodern/filament-shield/run-tests.yml?style=for-the-badge&logo=github&label=tests" class="filament-hidden">
     </a>
-    <a href="https://github.com/bezhansalleh/filament-shield/actions?query=workflow%3A"Check+%26+fix+styling"+branch%3A3.x" class="filament-hidden">
-        <img alt="Code Style Passing" src="https://img.shields.io/github/actions/workflow/status/bezhansalleh/filament-shield/laravel-pint.yml?style=for-the-badge&logo=github&label=code%20style">
+    <a href="https://github.com/webmodern/filament-shield/actions?query=workflow%3A"Check+%26+fix+styling"+branch%3A3.x" class="filament-hidden">
+        <img alt="Code Style Passing" src="https://img.shields.io/github/actions/workflow/status/webmodern/filament-shield/laravel-pint.yml?style=for-the-badge&logo=github&label=code%20style">
     </a>
 
-<a href="https://packagist.org/packages/bezhansalleh/filament-shield">
-    <img alt="Downloads" src="https://img.shields.io/packagist/dt/bezhansalleh/filament-shield.svg?style=for-the-badge" >
+<a href="https://packagist.org/packages/webmodern/filament-shield">
+    <img alt="Downloads" src="https://img.shields.io/packagist/dt/webmodern/filament-shield.svg?style=for-the-badge" >
     </a>
 </p>
 
@@ -46,7 +46,7 @@ The easiest and most intuitive way to add access management to your Filament Pan
 - Spatie Permission v6.0+
 
 > [!NOTE] 
-> For **Filament 2.x** use **[2.x](https://github.com/bezhanSalleh/filament-shield/tree/2.x)** branch
+> For **Filament 2.x** use **[2.x](https://github.com/webmodern/filament-shield/tree/2.x)** branch
 
 <div class="filament-hidden">
 <b>Table of Contents</b>
@@ -94,7 +94,7 @@ The easiest and most intuitive way to add access management to your Filament Pan
 
 ### 1. Install Package
 ```bash
-composer require bezhansalleh/filament-shield
+composer require webmodern/filament-shield
 ```
 
 ### 2. Configure Auth Provider
@@ -150,7 +150,7 @@ php artisan shield:install admin
 Or instead of the above command you can register the plugin manually in your `xPanelProvider`:
 ```php
     ->plugins([
-        \BezhanSalleh\FilamentShield\FilamentShieldPlugin::make(),
+        \webmodern\FilamentShield\FilamentShieldPlugin::make(),
     ])
 ```
 4.2 **With Tenancy:**
@@ -162,10 +162,10 @@ Or instead of the above command you can register the plugin and enable tenancy m
 ```php
     ->tenant(YourTenantModel::class)
     ->tenantMiddleware([
-        \BezhanSalleh\FilamentShield\Middleware\SyncShieldTenant::class,
+        \webmodern\FilamentShield\Middleware\SyncShieldTenant::class,
     ], isPersistent: true)
     ->plugins([
-        \BezhanSalleh\FilamentShield\FilamentShieldPlugin::make(),
+        \webmodern\FilamentShield\FilamentShieldPlugin::make(),
     ])
 ```
 This command will:
@@ -223,9 +223,9 @@ Consider you have a `PostResource` and you want a couple of the predefined permi
 ```php
 <?php
 
-namespace BezhanSalleh\FilamentShield\Resources;
+namespace webmodern\FilamentShield\Resources;
 
-use BezhanSalleh\FilamentShield\Contracts\HasShieldPermissions;
+use webmodern\FilamentShield\Contracts\HasShieldPermissions;
 ...
 
 class PostResource extends Resource implements HasShieldPermissions
@@ -292,7 +292,7 @@ If you wish to change the default behaviour, then you can call the static `confi
 For example, if you wish to use the model name as the permission identifier, you can do it like so:
 
 ```php
-use BezhanSalleh\FilamentShield\Facades\FilamentShield;
+use webmodern\FilamentShield\Facades\FilamentShield;
 
 FilamentShield::configurePermissionIdentifierUsing(
     fn($resource) => str($resource::getModel())
@@ -327,7 +327,7 @@ If you have generated permissions for `Pages` you can toggle the page's navigati
 namespace App\Filament\Pages;
 
 use ...;
-use BezhanSalleh\FilamentShield\Traits\HasPageShield;
+use webmodern\FilamentShield\Traits\HasPageShield;
 
 class MyPage extends Page
 {
@@ -348,7 +348,7 @@ However if you need to perform some methods before and after the booted method y
 namespace App\Filament\Pages;
 
 use ...;
-use BezhanSalleh\FilamentShield\Traits\HasPageShield;
+use webmodern\FilamentShield\Traits\HasPageShield;
 
 class MyPage extends Page
 {
@@ -383,7 +383,7 @@ class MyPage extends Page
 namespace App\Filament\Pages;
 
 use ...;
-use BezhanSalleh\FilamentShield\Traits\HasPageShield;
+use webmodern\FilamentShield\Traits\HasPageShield;
 
 class MyPage extends Page
 {
@@ -405,7 +405,7 @@ if you have generated permissions for `Widgets` you can toggle their state based
 namespace App\Filament\Widgets;
 
 use ...;
-use BezhanSalleh\FilamentShield\Traits\HasWidgetShield;
+use webmodern\FilamentShield\Traits\HasWidgetShield;
 
 class IncomeWidget extends LineChartWidget
 {
@@ -527,7 +527,7 @@ You can find out more about these components in the [Filament Docs](https://fila
 #### Layout Customization
 You can easily customize the `Grid`, `Section` and `CheckboxList`'s `columns()` and `columnSpan()` without publishing the resource.
 ```php
-use BezhanSalleh\FilamentShield\FilamentShieldPlugin;
+use webmodern\FilamentShield\FilamentShieldPlugin;
 
 public function panel(Panel $panel): Panel
 {
@@ -554,14 +554,14 @@ public function panel(Panel $panel): Panel
             ]);
 }
 ```
-<img width="1161" alt="Screenshot 2023-09-24 at 10 34 31 PM" src="https://github.com/bezhanSalleh/filament-shield/assets/10007504/be42bab2-72d1-4db0-8de4-8b8fba2d4e68">
+<img width="1161" alt="Screenshot 2023-09-24 at 10 34 31 PM" src="https://github.com/webmodern/filament-shield/assets/10007504/be42bab2-72d1-4db0-8de4-8b8fba2d4e68">
 
 ## Available Commands
 ### Prohibited Commands
 Since almost all shield commands are destructive and can cause data loss, they can be prohibited by calling the prohibit method of the command as following in a service provider's `boot()` method:
 ```php
-use BezhanSalleh\FilamentShield\FilamentShield;
-use BezhanSalleh\FilamentShield\Commands;
+use webmodern\FilamentShield\FilamentShield;
+use webmodern\FilamentShield\Commands;
     public function boot(): void
     {
         // individually prohibit commands
@@ -637,7 +637,7 @@ Please review [our security policy](../../security/policy) on how to report secu
 
 ## Credits
 
-- [Bezhan Salleh](https://github.com/bezhanSalleh)
+- [Bezhan Salleh](https://github.com/webmodern)
 - [All Contributors](../../contributors)
 
 ## License

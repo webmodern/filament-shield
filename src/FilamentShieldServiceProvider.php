@@ -1,8 +1,8 @@
 <?php
 
-namespace BezhanSalleh\FilamentShield;
+namespace webmodern\FilamentShield;
 
-use BezhanSalleh\FilamentShield\Support\Utils;
+use webmodern\FilamentShield\Support\Utils;
 use Illuminate\Support\Facades\Gate;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;

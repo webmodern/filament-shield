@@ -1,6 +1,6 @@
 <?php
 
-namespace BezhanSalleh\FilamentShield\Middleware;
+namespace webmodern\FilamentShield\Middleware;
 
 use Closure;
 use Filament\Facades\Filament;

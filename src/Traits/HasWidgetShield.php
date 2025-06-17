@@ -1,8 +1,8 @@
 <?php
 
-namespace BezhanSalleh\FilamentShield\Traits;
+namespace webmodern\FilamentShield\Traits;
 
-use BezhanSalleh\FilamentShield\Support\Utils;
+use webmodern\FilamentShield\Support\Utils;
 use Filament\Facades\Filament;
 use Illuminate\Support\Str;
 

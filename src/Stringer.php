@@ -4,7 +4,7 @@
 
 declare(strict_types=1);
 
-namespace BezhanSalleh\FilamentShield;
+namespace webmodern\FilamentShield;
 
 use Illuminate\Support\Traits\Conditionable;
 

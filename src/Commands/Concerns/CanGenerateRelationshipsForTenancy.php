@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace BezhanSalleh\FilamentShield\Commands\Concerns;
+namespace webmodern\FilamentShield\Commands\Concerns;
 
-use BezhanSalleh\FilamentShield\Stringer;
+use webmodern\FilamentShield\Stringer;
 use Filament\Facades\Filament;
 use Filament\Panel;
 use Illuminate\Database\Eloquent\Model;

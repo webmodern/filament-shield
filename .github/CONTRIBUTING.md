@@ -17,7 +17,7 @@ Install the packages in your app's `composer.json`:
 
 ```json
 "require": {
-    "bezhansalleh/filament-shield": "dev-fix/error-message as main-dev",
+    "webmodern/filament-shield": "dev-fix/error-message as main-dev",
 },
 "repositories": [
     {

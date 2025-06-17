@@ -1,8 +1,8 @@
 <?php
 
-namespace BezhanSalleh\FilamentShield;
+namespace webmodern\FilamentShield;
 
-use BezhanSalleh\FilamentShield\Support\Utils;
+use webmodern\FilamentShield\Support\Utils;
 use Closure;
 use Filament\Facades\Filament;
 use Filament\Support\Concerns\EvaluatesClosures;

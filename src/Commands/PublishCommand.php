@@ -1,6 +1,6 @@
 <?php
 
-namespace BezhanSalleh\FilamentShield\Commands;
+namespace webmodern\FilamentShield\Commands;
 
 use Filament\Facades\Filament;
 use Illuminate\Console\Command;
@@ -58,7 +58,7 @@ class PublishCommand extends Command
         $filesystem->ensureDirectoryExists($newResourcePath);
         $filesystem->copyDirectory(__DIR__ . '/../Resources', $newResourcePath);
 
-        $currentNamespace = 'BezhanSalleh\\FilamentShield\\Resources';
+        $currentNamespace = 'webmodern\\FilamentShield\\Resources';
 
         $this->replaceInFile($roleResourcePath, $currentNamespace, $newResourceNamespace);
         $this->replaceInFile($newResourcePath . '/RoleResource/Pages/CreateRole.php', $currentNamespace, $newResourceNamespace);

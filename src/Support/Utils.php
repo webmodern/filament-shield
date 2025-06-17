@@ -1,9 +1,9 @@
 <?php
 
-namespace BezhanSalleh\FilamentShield\Support;
+namespace webmodern\FilamentShield\Support;
 
-use BezhanSalleh\FilamentShield\Contracts\HasShieldPermissions;
-use BezhanSalleh\FilamentShield\FilamentShield;
+use webmodern\FilamentShield\Contracts\HasShieldPermissions;
+use webmodern\FilamentShield\FilamentShield;
 use Filament\Facades\Filament;
 use Filament\Pages\SubNavigationPosition;
 use Filament\Panel;

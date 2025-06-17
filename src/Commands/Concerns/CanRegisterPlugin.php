@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace BezhanSalleh\FilamentShield\Commands\Concerns;
+namespace webmodern\FilamentShield\Commands\Concerns;
 
-use BezhanSalleh\FilamentShield\Stringer;
+use webmodern\FilamentShield\Stringer;
 
 trait CanRegisterPlugin
 {
@@ -12,7 +12,7 @@ trait CanRegisterPlugin
     {
         $stringer = Stringer::for($panelPath);
 
-        $shieldPluginImportStatement = 'use BezhanSalleh\FilamentShield\FilamentShieldPlugin;';
+        $shieldPluginImportStatement = 'use webmodern\FilamentShield\FilamentShieldPlugin;';
         $shieldPlugin = 'FilamentShieldPlugin::make()';
         $pluginsArray = "->plugins([\n";
         $pluginsTarget = '->middleware([';

@@ -1,11 +1,11 @@
 <?php
 
-namespace BezhanSalleh\FilamentShield\Facades;
+namespace webmodern\FilamentShield\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
 /**
- * @method static \BezhanSalleh\FilamentShield\FilamentShield configurePermissionIdentifierUsing(\Closure $callback)
+ * @method static \webmodern\FilamentShield\FilamentShield configurePermissionIdentifierUsing(\Closure $callback)
  * @method static string getPermissionIdentifier(string $resource)
  * @method static void generateForResource(array $entity)
  * @method static void generateForPage(string $page)
@@ -22,7 +22,7 @@ use Illuminate\Support\Facades\Facade;
  * @method static \Illuminate\Support\Collection|null getCustomPermissions()
  * @method static mixed evaluate(mixed $value, array $namedInjections = [], array $typedInjections = [])
  *
- * @see \BezhanSalleh\FilamentShield\FilamentShield
+ * @see \webmodern\FilamentShield\FilamentShield
  */
 class FilamentShield extends Facade
 {

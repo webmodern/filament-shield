@@ -1,9 +1,9 @@
 <?php
 
-namespace BezhanSalleh\FilamentShield\Commands;
+namespace webmodern\FilamentShield\Commands;
 
-use BezhanSalleh\FilamentShield\Stringer;
-use BezhanSalleh\FilamentShield\Support\Utils;
+use webmodern\FilamentShield\Stringer;
+use webmodern\FilamentShield\Support\Utils;
 use Illuminate\Console\Command;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Collection;
@@ -73,13 +73,13 @@ class SetupCommand extends Command
         if (! $this->option('minimal')) {
             if (confirm('Would you like to show some love by starring the repo?')) {
                 if (PHP_OS_FAMILY === 'Darwin') {
-                    exec('open https://github.com/bezhanSalleh/filament-shield');
+                    exec('open https://github.com/webmodern/filament-shield');
                 }
                 if (PHP_OS_FAMILY === 'Linux') {
-                    exec('xdg-open https://github.com/bezhanSalleh/filament-shield');
+                    exec('xdg-open https://github.com/webmodern/filament-shield');
                 }
                 if (PHP_OS_FAMILY === 'Windows') {
-                    exec('start https://github.com/bezhanSalleh/filament-shield');
+                    exec('start https://github.com/webmodern/filament-shield');
                 }
 
                 $this->components->info('Thank you!');

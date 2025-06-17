@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace BezhanSalleh\FilamentShield\Traits;
+namespace webmodern\FilamentShield\Traits;
 
-use BezhanSalleh\FilamentShield\Facades\FilamentShield;
-use BezhanSalleh\FilamentShield\FilamentShieldPlugin;
-use BezhanSalleh\FilamentShield\Support\Utils;
+use webmodern\FilamentShield\Facades\FilamentShield;
+use webmodern\FilamentShield\FilamentShieldPlugin;
+use webmodern\FilamentShield\Support\Utils;
 use Filament\Forms;
 use Filament\Forms\Components\Component;
 use Illuminate\Database\Eloquent\Model;
